@@ -1,74 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
-:root{
+:root {
   font-size: 62.5%;
   /* 1 rem = 10px */
 
   /* Primary */
-  --red:#ea5353;
-  --cyan:#45d3d3;
-  --orange:#fcaf4a;
-  --blue:#549ef2;
+  --red: #ea5353;
+  --cyan: #45d3d3;
+  --orange: #fcaf4a;
+  --blue: #549ef2;
   /* Neutral */
-  --vDarkBlue:hsl(234, 12%, 34%);
-  --grayBlue:hsl(229, 6%, 66%);
-  --vLightGray:hsl(0, 0%, 98%);
+  --vDarkBlue: hsl(234, 12%, 34%);
+  --grayBlue: hsl(229, 6%, 66%);
+  --vLightGray: hsl(0, 0%, 98%);
 }
 
 body {
   margin: 0;
 }
 
-.container{
+.container {
   min-height: 100vh;
   display: grid;
   place-items: center;
   background-color: var(--vLightGray);
 }
 
-.info1{
+.info1 {
   display: grid;
 }
 
-.info1 h1{
-font-family: "Poppins";
-font-weight: 200;
-font-size: 2.8rem;
-max-width: 24ch;
-color: var(--vDarkBlue);
-place-self: center;
-text-align: center;
+.info1 h1 {
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 3.4rem;
+  max-width: 24ch;
+  color: var(--vDarkBlue);
+  place-self: center;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.info1 h1 span{
+.info1 h1 span {
   font-weight: 600;
 }
 
-.info1 p{
-font-family: "Poppins";
-font-size: 1.5rem;
-max-width: 52ch;
-text-align: center;
-color: var(--grayBlue);
+.info1 p {
+  display: grid;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  max-width: 52ch;
+  text-align: center;
+  color: var(--grayBlue);
+  place-self: center;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
 }
 
+.info2 {
+  display: flex;
+  place-items: center;
+}
 
+.info2 div {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0rem 0rem 2rem #0000002c;
+}
 
+.info2 div::before {
+  content: "";
+  width: auto;
+  height: 0.4rem;
+  background-color: var(--cyan);
+  border-radius: 1rem 1rem 0rem 0rem;
+}
 
+.info2 .team::before {
+  background-color: var(--red);
+}
 
+.info2 .karma::before {
+  background-color: var(--orange);
+}
 
+.info2 .calc::before {
+  background-color: var(--blue);
+}
 
+.info2 div:first-child {
+  background-color: #fff;
+}
 
+.info2 div:last-child {
+  background-color: #fff;
+}
 
+.info2 .collum {
+  margin-block: 1rem;
+}
 
+.info2 .collum .team {
+  margin-bottom: 2.5rem;
+}
 
+.info2 div h2 {
+  font-family: "Poppins";
+  margin-left: 2rem;
+  margin-top: 3rem;
+  color: var(--vDarkBlue);
+  margin-bottom: 0rem;
+}
 
- .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+.info2 div p {
+  font-family: "Poppins";
+  margin-top: 0rem;
+  margin-inline: 2rem;
+  font-size: 1.2rem;
+  max-width: 30ch;
+  color: var(--grayBlue);
+}
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+.info2 div img {
+  width: 50px;
+  place-self: end;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
 
+.info2 .collum .team img {
+  margin-top: 1.5rem;
+}
+
+.info2 .collum .team p {
+  max-width: 32ch;
+}
+
+.info2 .collum .karma img {
+  margin-top: 1.5rem;
+}
+
+.info2 .collum .karma p {
+  max-width: 32ch;
+}
+
+.attribution {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--vDarkBlue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+
+  .info1 h1 {
+    font-size: 2.2rem;
+    margin-top: 6rem;
+  }
+
+  .info1 p{
+    font-size: 1.3rem;
+    max-width: 33ch;
+  }
+
+  .info2 {
+    display: grid;
+    place-items: center;
+  }
+
+  .attribution{
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+  }
+}
